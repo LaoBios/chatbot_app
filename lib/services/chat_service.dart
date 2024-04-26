@@ -17,7 +17,8 @@ class ChatService extends BaseService {
         // Check if the response contains "data" field
         if (responseData.containsKey('data')) {
           // Deserialize the JSON response into a ChatModel object
-          return ChatModel.fromJson(responseData['data']);
+          //return ChatModel.fromJson(responseData['data']);
+          return chatModelFromJson(responseData['data']);
         }
       }
       // Return null if the response format is incorrect or if data is missing
