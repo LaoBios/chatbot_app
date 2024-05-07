@@ -38,7 +38,7 @@ class ChatMessage extends StatelessWidget {
           if (message.isUserMessage)
             TextSpan(
               text: message.text,
-              style: TextStyle(color: Colors.white),
+              style: const TextStyle(color: Colors.white),
             )
           else
             ..._buildMessageWithLinks(),
@@ -63,14 +63,14 @@ class ChatMessage extends StatelessWidget {
         textSpans.add(
           TextSpan(
             text: messageText.substring(previousEnd, match.start),
-            style: TextStyle(color: Colors.white),
+            style: const TextStyle(color: Colors.white),
           ),
         );
       }
       textSpans.add(
         TextSpan(
           text: url,
-          style: TextStyle(
+          style:const TextStyle(
             color: Colors.blue,
             decoration: TextDecoration.underline,
           ),
@@ -87,7 +87,7 @@ class ChatMessage extends StatelessWidget {
       textSpans.add(
         TextSpan(
           text: messageText.substring(previousEnd),
-          style: TextStyle(color: Colors.white),
+          style: const TextStyle(color: Colors.white),
         ),
       );
     }
@@ -103,3 +103,4 @@ class ChatMessage extends StatelessWidget {
     }
   }
 }
+// Test git push
